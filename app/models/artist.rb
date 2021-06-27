@@ -1,3 +1,3 @@
 class Artist < ApplicationRecord
-  validates :name, presence: true
+  validates :name, :description, presence: true
 end
