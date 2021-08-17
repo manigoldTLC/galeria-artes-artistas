@@ -11,3 +11,5 @@ Artist.create(name: 'Michelangelo',
 
 Artist.create(name: 'Leonardo da Vinci',
               description: 'Leonardo di Ser Piero da Vinci, ou simplesmente Leonardo da Vinci, foi um polímata nascido na atual Itália, uma das figuras mais importantes do Alto Renascimento, que se destacou como cientista, matemático, engenheiro, inventor, anatomista, pintor, escultor, arquiteto, botânico, poeta e músico.')
+
+ArtStyle.create(name:'Barroco', description:'É um estilo de pintura')

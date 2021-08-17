@@ -1,5 +1,5 @@
 class Painting < ApplicationRecord
-  belongs_to :artstyle
+  belongs_to :art_style
   belongs_to :artist
   has_one_attached :image
   
