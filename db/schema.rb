@@ -10,6 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
+ActiveRecord::Schema.define(version: 2021_06_24_025427) do
+
 ActiveRecord::Schema.define(version: 2021_07_25_084522) do
 
   # These are extensions that must be enabled in order to support this database
@@ -29,6 +32,27 @@ ActiveRecord::Schema.define(version: 2021_07_25_084522) do
     t.text "description"
   end
 
+  create_table "favorites", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "painting_id"
+    t.bigint "user_id"
+    t.index ["painting_id"], name: "index_favorites_on_painting_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
+
+  create_table "paintings", force: :cascade do |t|
+    t.string "name"
+    t.bigint "art_style_id"
+    t.bigint "artist_id"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "year"
+    t.index ["art_style_id"], name: "index_paintings_on_art_style_id"
+    t.index ["artist_id"], name: "index_paintings_on_artist_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -45,4 +69,8 @@ ActiveRecord::Schema.define(version: 2021_07_25_084522) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "favorites", "paintings"
+  add_foreign_key "favorites", "users"
+  add_foreign_key "paintings", "art_styles"
+  add_foreign_key "paintings", "artists"
 end
