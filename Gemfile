@@ -32,9 +32,8 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # RSpec.
-  gem 'rspec-rails'
   gem 'factory_bot_rails'
-
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -49,13 +48,10 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'figaro'
 
-
 # Usuario
 gem 'devise'
 gem 'simple_token_authentication'
 
-
 # Testes
 
 gem 'rspec-core'
-

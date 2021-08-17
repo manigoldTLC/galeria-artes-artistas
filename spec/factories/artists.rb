@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :artist do
-    name { 'MyString' }
+    name { 'Artista' }
+    description { 'Descrição do artista' }
   end
 end
