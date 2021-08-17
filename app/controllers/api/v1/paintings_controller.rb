@@ -1,9 +1,5 @@
 class Api::V1::PaintingsController < ApplicationController
 
-    before_action :require_user_login, except: %i[create index show]
-    before_action :require_current_user, except: %i[create index show]
-    before_action :check_if_exists, only: %i[show update delete]
-
   def index
     paintings = Painting.all
 

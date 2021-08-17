@@ -28,10 +28,10 @@ Rails.application.routes.draw do
       namespace 'v1' do
         scope 'paintings/' do
           get 'index', to: 'paintings#index'
-          post 'create', to: 'painting#create'
-          patch 'update/:id', to: 'painting#update'
-          get 'show/:id', to: 'painting#show'
-          delete 'destroy/:id', to: 'painting#delete'
+          post 'create', to: 'paintings#create'
+          patch 'update/:id', to: 'paintings#update'
+          get 'show/:id', to: 'paintings#show'
+          delete 'destroy/:id', to: 'paintings#delete'
         end
     end
   end

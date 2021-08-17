@@ -1,6 +1,6 @@
 class PaintingSerializer < ActiveModel::Serializer
   include Rails.application.routes.url_helpers
-  attributes :id, :name, :description, :artist
+  attributes :id, :name, :description, :artist, :image_url
 
   def image_url
     if painting.images.attached?
