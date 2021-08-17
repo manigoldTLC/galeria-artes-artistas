@@ -55,3 +55,5 @@ gem 'simple_token_authentication'
 # Testes
 
 gem 'rspec-core'
+
+gem 'rack-cors'
