@@ -11,6 +11,16 @@ Rails.application.routes.draw do
         put 'update/:id', to: 'artists#update'
         delete 'destroy/:id', to: 'artists#destroy'
       end
+
+      scope 'users/' do
+        get 'index', to: 'users#index'
+        post 'create', to: 'users#create'
+        patch 'update/:id', to: 'users#update'
+        get 'show/:id', to: 'users#show'
+        delete 'delete/:id', to: 'users#delete'
+        post 'login', to: 'users#login'
+        post 'logout', to: 'users#logout'
+      end
     end
   end
 end
