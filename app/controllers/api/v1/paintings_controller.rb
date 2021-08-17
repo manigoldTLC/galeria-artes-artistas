@@ -49,8 +49,9 @@ class Api::V1::PaintingsController < ApplicationController
       :artist_id,
       :artstyle_id,
       :description,
+      image = []
     )
   end
 end
 
-#Painting.create(name:'Corno montado', artist_id:'1', art_style_id:'1', description:'bla', year:'2',)
+#Painting.create(name:'Corno montado', artist_id:'1', artstyle_id:'1', description:'bla', year:'2',)

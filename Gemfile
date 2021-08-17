@@ -57,3 +57,6 @@ gem 'simple_token_authentication'
 gem 'rspec-core'
 
 gem 'active_model_serializers'
+
+gem "image_processing", ">= 1.2"
+

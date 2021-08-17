@@ -3,10 +3,11 @@ class PaintingSerializer < ActiveModel::Serializer
   attributes :id, :name, :description, :artist, :image_url
 
   def image_url
-    if painting.images.attached?
-        rails_blob_path(painting, only_path: true)
+    if object.image.attached?
+        rails_blob_path(object.image, only_path: true)
     else
       'Sem imagem'
     end
   end
+
 end
