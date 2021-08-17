@@ -51,9 +51,8 @@ class Api::V1::PaintingsController < ApplicationController
     params.require(:painting).permit(
       :name,
       :artist_id,
-      :art_style_id,
+      :artstyle_id,
       :description,
-      :year
     )
   end
 end
