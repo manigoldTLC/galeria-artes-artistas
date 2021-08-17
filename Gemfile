@@ -57,3 +57,6 @@ gem 'simple_token_authentication'
 gem 'rspec-core'
 
 gem 'rack-cors'
+
+gem 'active_model_serializers'
+
